@@ -1,25 +1,21 @@
-import './App.css';
-import HelloReact from './components/HelloReact';
+import "./App.css";
+import HelloReact from "./components/HelloReact";
+import SayMyTelephone from "./components/SayMyTelephone";
+import Pessoa from "./components/Pessoa";
 
 function App() {
-  const name = 'Diego';
-  const newName = name.toUpperCase();
-  const url = 'https://via.placeholder.com/200'
-  function sum(a,b){
-    return a+b;
-  }
-
   return (
     <div className="App">
-      <HelloReact/>
-      <h1>Olá reactJS</h1>
-      <p>Introdução</p>
-      <h2>Alterando JSX - ass {newName}</h2>
-      <p>Soma: {sum(5,5)}</p>
-      <img src={url} alt="Minha IMG"/>
-      <br/>
-      
-      
+      <HelloReact />
+      <SayMyTelephone telefone="11223344" />
+      <SayMyTelephone telefone="11" />
+      <SayMyTelephone telefone="441" />
+      <Pessoa
+        nome="Pedrinho"
+        idade="15"
+        profissao="Designer"
+        foto="https://via.placeholder.com/150"
+      />
     </div>
   );
 }
